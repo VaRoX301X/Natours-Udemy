@@ -18,4 +18,48 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh; /*95% of the view port height*/
+    background-image: linear-gradient(to right bottom,
+    rgba(126, 213, 111, 0.801),
+    rgba(40, 180, 133, 0.808)) ,
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    /*                 TL   TR   BR   BL   */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: relative; /*for use absolute in logo-box*/
+}
+.text-box{
+    position: absolute;
+    top: 50%; /*To the parent element*/
+    left: 50%; /*To the parent element*/
+    transform: translate(-50%, -50%); /*Center the middle of the element*/
+}
+.logo-box {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+.logo {
+    height: 2rem;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
 }
